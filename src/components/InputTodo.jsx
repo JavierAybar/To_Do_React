@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 const InputTodo = ({ addTodoItem }) => {
@@ -33,5 +34,9 @@ const InputTodo = ({ addTodoItem }) => {
      <span className="submit-warning">{message}</span>
      </>
   );
+};
+
+InputTodo.propTypes = {
+  addTodoItem: PropTypes.func.isRequired,
 };
 export default InputTodo;
